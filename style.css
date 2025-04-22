@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #ddd;
+  background: linear-gradient(to bottom right, #0f172a, #1e293b, #000);
+  overflow-x: hidden;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  padding: 60px 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 1s ease;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  opacity: 0;
+  transition: all 1s ease;
+  color: #bbb;
+}
+
+.profile-photo {
+  margin-bottom: 20px;
+}
+
+.profile-photo img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #334155;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 1s ease;
+}
+
+.profile-photo.visible img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.about, .skills, .projects, .education, .contact {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #e5e5e5;
+  text-shadow: 0 0 8px #38bdf8, 0 0 12px #3b82f6;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 6px #3b82f6; }
+  to { text-shadow: 0 0 16px #38bdf8; }
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+}
+
+.skills-grid div {
+  background: #1e293b;
+  color: #ddd;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-grid div:hover {
+  transform: scale(1.08);
+  background: #334155;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.8);
+}
+
+.project-card {
+  background: #1e293b;
+  color: #ccc;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+  text-align: left;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.education ul {
+  list-style: none;
+  padding: 0;
+}
+
+.education li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #bbb;
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.linkedin {
+  background: #0077b5;
+  color: white;
+}
+
+.download {
+  background: #1e293b;
+  color: #ddd;
+}
+
+.linkedin:hover {
+  background: #005983;
+  transform: scale(1.05);
+}
+
+.download:hover {
+  background: #334155;
+  transform: scale(1.05);
+}
